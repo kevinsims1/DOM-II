@@ -41,13 +41,26 @@ document.querySelector('.imgone').addEventListener('drag', element => {
 window.addEventListener('load', event => {alert(`WEBPAGE LOADED`)});
 
 //FOCUS
+// document.getElementById('btnOne').addEventListener('focus', (event) => {
+//     event.target.style.zoom = '110%';    
+// }, true);
 
 
 //RESIZE
-
+window.addEventListener('resize', (event) => {
+    console.log(window.innerWidth);    
+}, true);
 
 //SCROLL
-
+window.addEventListener("scroll", element => {
+    var ypos = window.pageYOffset;
+    if(ypos > 587) {
+        document.getElementById("navContainerID").style.height = "70px";
+    }
+    else{
+        document.getElementById("navContainerID").style.height = "150px";
+    }
+})
 
 //SELECT
 
